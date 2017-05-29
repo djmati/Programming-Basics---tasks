@@ -30,7 +30,7 @@ namespace CheckPrime
                 }
                 catch
                 {
-                    Console.WriteLine("Invalid Number!");
+                    Console.WriteLine("Невалиден номер!");
                 }
             }
         }
