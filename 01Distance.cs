@@ -1,27 +1,38 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Distance
+namespace CheckPrime
 {
-    static void Main()
+    class Program
     {
-        int initiallySpeed = int.Parse(Console.ReadLine());
-        decimal firstTime = int.Parse(Console.ReadLine()) / 60.0M;
-        decimal secondTime = int.Parse(Console.ReadLine()) / 60.0M;
-        decimal thirdTime = int.Parse(Console.ReadLine()) / 60.0M;
+        static void Main(string[] args)
+        {
+            bool istesting = true;
+            while (istesting)
+            {
+                Console.Write("Enter even number: ");
+                string number = Console.ReadLine();
 
-        decimal currentSpeeds = 0;
+                try
+                {
+                    int numeral = Convert.ToInt32(number);
+                    if (numeral % 2 == 0 && numeral != 0)
+                    {
+                        Console.WriteLine("Even number entered: {0}", numeral);
+                        istesting = false;
+                    }
 
-        decimal distanceWithInitiallySpeed = initiallySpeed * firstTime;
-
-        currentSpeed = (initiallySpeed + (initiallySpeed * 0.1M));
-        decimal distanceWithIncreasedSpeed = currentSpeed * secondTime;
-
-        currentSpeed = (currentSpeed - (currentSpeed * 0.05M));
-        decimal distanceWithReducedSpeed = currentSpeed * thirdTime;
-
-        decimal totalDistance = distanceWithInitiallySpeed + distanceWithIncreasedSpeed +
-            distanceWithReducedSpeed;
-
-        Console.WriteLine("{0:F2}", totalDistance);
+                    else
+                        Console.WriteLine("The number is not even.");
+                }
+                catch
+                {
+                    Console.WriteLine("Invalid Number!");
+                }
+            }
+        }
     }
 }
