@@ -9,7 +9,7 @@ class Distance
         decimal secondTime = int.Parse(Console.ReadLine()) / 60.0M;
         decimal thirdTime = int.Parse(Console.ReadLine()) / 60.0M;
 
-        decimal currentSpeed = 0;
+        decimal currentSpeeds = 0;
 
         decimal distanceWithInitiallySpeed = initiallySpeed * firstTime;
 
